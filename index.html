@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>projek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        font-family: "Mulish", sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 26px 117px;
+        background-color: rgba(187, 107, 217, 0.1);
+        /* background: linear-gradient(180deg, #fdab72 0%, #fe954d 100%); */
+      }
+      .nav-links {
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: inherit;
+        margin: 0px 16px;
+      }
+      .nav-links a:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+      .nav-brand {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #f53838;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .button-border {
+        border: 1px solid #f53855;
+        background-color: transparent;
+        padding: 13px 45px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #f53855;
+        transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+      }
+      .button-border:hover {
+        cursor: pointer;
+        background-color: #f53855;
+        color: white;
+      }
+      .button-text {
+        border: 0;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 700;
+        transition: color 250ms ease-in-out;
+      }
+      .button-text:hover {
+        cursor: pointer;
+        color: #f53855;
+      }
+      .nav-login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .page-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(187, 107, 217, 0.1);
+        padding-bottom: 56px;
+      }
+      .title-heading {
+        font-size: 44px;
+        font-weight: 700;
+        width: 700px;
+        text-align: center;
+      }
+      .title-conten {
+        font-size: 16px;
+        font-weight: 400;
+        width: 700px;
+        text-align: center;
+      }
+      .btn-primary {
+        background-color: #f53838;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 48px;
+        transition: background-color 250ms ease-in-out;
+        margin-top: 36px;
+      }
+      .btn-primary:hover {
+        cursor: pointer;
+        background-color: #bd3a3a;
+      }
+      .blog-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px;
+      }
+      .section-title-container {
+        text-align: center;
+        width: 700px;
+      }
+      .section-title-container h3 {
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 0.1px;
+      }
+      .section-title-container p {
+        font-weight: 400;
+        font-size: 16px;
+        color: #737b7d;
+      }
+      .section-title-container a {
+        text-decoration: none;
+        color: #3c64b1;
+      }
+      .section-title-container a:hover {
+        text-decoration: underline;
+      }
+      .card {
+        width: 400px;
+        margin: auto;
+        background-color: #f2f2f2;
+        border-radius: 16px;
+      }
+      .card h5 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #081f32;
+        margin: 0;
+      }
+      .card p {
+        font-weight: 400;
+        font-size: 13px;
+        margin-top: 24px;
+        color: #737b7d;
+      }
+      .card-body {
+        padding: 24px;
+      }
+      .card-head {
+        height: 168px;
+        background-color: #d2ebf7;
+        border-radius: 16px 16px 0px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-head img {
+        height: 150px;
+      }
+      .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 56px;
+      }
+      .card-container .card {
+        margin: 8px 16px;
+      }
+      .contak-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px;
+        border-top: 1px solid #dbdbdb;
+        margin: 90px 90px;
+      }
+      .contak-item-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 56px;
+      }
+      .contak-item {
+        width: 300px;
+      }
+      .contak-item h6,
+      .contak-item p {
+        margin-left: 30%;
+      }
+      .contak-item h6 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-weight: 700;
+        font-size: 18px;
+        color: #373f41;
+      }
+      .contak-item p {
+        margin-top: 8px;
+        margin-bottom: 0px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #373f41;
+      }
+      footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(187, 107, 217, 0.1);
+        padding: 120px 0px;
+      }
+      .footer-item {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-item h6 {
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+      .footer-item a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: #4f5665;
+        margin-top: 8px;
+      }
+      .footer-item a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="nav-brand">WEBSITEKU</div>
+      <div class="nav-links">
+        <a href="#">Feature</a>
+        <a href="./blog.html">News and Blog</a>
+        <a href="#contak">Contact</a>
+      </div>
+      <div class="nav-login">
+        <button class="button-text" style="margin-right: 30px">Sign In</button>
+        <button class="button-border">Sign Up</button>
+      </div>
+    </nav>
+    <div class="page-title">
+      <h2 class="title-heading">Simplyfy your online shipping for free this month!</h2>
+      <p class="title-conten">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vero nobis, voluptates, obcaecati officia adipisci minus totam magnam mollitia aliquid deserunt quibusdam aspernatur dolorem eius accusantium repudiandae odit ab dolor?
+      </p>
+      <button class="btn-primary">Start Shopping!</button>
+    </div>
+    <div class="blog-section">
+      <div class="section-title-container">
+        <h3>News and Blog</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita accusantium quidem excepturi exercitationem perferendis cum maiores, inventore harum facere similique possimus pariatur sapiente amet consequatur iusto ea
+          voluptate beatae?
+        </p>
+        <a href="./blog.html">See All</a>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-head">
+          <img src="./laptop.png " />
+        </div>
+        <div class="card-body">
+          <h5>Ini Title Card</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla earum, doloremque voluptatum ipsam minima eos praesentium culpa, eveniet eius, debitis dolorem numquam! Nisi odio dignissimos inventore sunt a libero provident!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img src="./laptop.png " />
+        </div>
+        <div class="card-body">
+          <h5>Ini Title Card</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla earum, doloremque voluptatum ipsam minima eos praesentium culpa, eveniet eius, debitis dolorem numquam! Nisi odio dignissimos inventore sunt a libero provident!
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <img src="./laptop.png " />
+        </div>
+        <div class="card-body">
+          <h5>Ini Title Card</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla earum, doloremque voluptatum ipsam minima eos praesentium culpa, eveniet eius, debitis dolorem numquam! Nisi odio dignissimos inventore sunt a libero provident!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contak-section" id="contak">
+      <div class="section-title-container">
+        <h3>Contak Us</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita accusantium quidem excepturi exercitationem perferendis cum maiores, inventore harum facere similique possimus pariatur sapiente amet consequatur iusto ea
+          voluptate beatae?
+        </p>
+      </div>
+      <div class="contak-item-container">
+        <div class="contak-item">
+          <h6>Address</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex incidunt ducimus.</p>
+        </div>
+        <div class="contak-item">
+          <h6>Email</h6>
+          <p>user@gmail.com</p>
+        </div>
+        <div class="contak-item">
+          <h6>Phone</h6>
+          <p>021-123456</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-item">
+        <h6>Produk</h6>
+        <a href="#">Download</a>
+        <a href="#">Pricing</a>
+        <a href="#">Location</a>
+      </div>
+      <div class="footer-item">
+        <h6>Engage</h6>
+        <a href="#">FAQ</a>
+        <a href="#">Tutorial</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footer-item">
+        <h6>Earn Money</h6>
+        <a href="#">Become Partners</a>
+      </div>
+    </footer>
+  </body>
+</html>
